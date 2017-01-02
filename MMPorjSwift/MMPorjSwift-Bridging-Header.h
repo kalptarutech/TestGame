@@ -10,4 +10,4 @@
 #import "SWRevealViewController.h"
 #import "KAProgressLabel/KAProgressLabel.h"
 #import "NZCircularImageView/NZCircularImageView.h"
-
+#import "iCarousel.h"

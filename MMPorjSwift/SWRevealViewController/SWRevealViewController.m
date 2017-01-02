@@ -1617,11 +1617,12 @@ const int FrontViewPositionNone = 0xff;
 // animation completion, or right after return in case of non-animated deployment.
 - (void (^)(void))_deployForViewController:(UIViewController*)controller inView:(UIView*)view
 {
+   // NSLog(@"controller view %@ view %@",controller,controller.view);
+
     if ( !controller || !view )
         return ^(void){};
     
     CGRect frame = view.bounds;
-    
     UIView *controllerView = controller.view;
     controllerView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     controllerView.frame = frame;
@@ -1670,6 +1671,8 @@ const int FrontViewPositionNone = 0xff;
     if ( fromController == toController )
         return ^(void){};
     
+ //   NSLog(@"controller view %@ view %@",toController,toController.view);
+
     if ( toController ) [self addChildViewController:toController];
     
     void (^deployCompletion)() = [self _deployForViewController:toController inView:view];

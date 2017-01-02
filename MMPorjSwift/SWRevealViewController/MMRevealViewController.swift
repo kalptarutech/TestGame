@@ -51,11 +51,12 @@ class MMRevealViewController: SWRevealViewController, SWRevealViewControllerDele
     func addRightViewController(rightVC: UIViewController) -> Void {
       
         let revealController = self;
-        revealController.rightViewController = rightVC;
+       // revealController.rightViewController = rightVC;
+        revealController .setRightViewController(rightVC, animated: true);
         revealController.rightViewRevealOverdraw = 0
         revealController.rightViewRevealWidth = revealController.width
         revealController.setFrontViewPosition(.LeftSideMost, animated: true)
-        revealController.panGestureRecognizer().enabled = true
+       revealController.panGestureRecognizer().enabled = true
         
         
         self.rightViewController!.view!.addGestureRecognizer(self.panGestureRecognizer()!);
@@ -66,6 +67,8 @@ class MMRevealViewController: SWRevealViewController, SWRevealViewControllerDele
         tapRecognizer?.numberOfTouchesRequired = 1
         tapRecognizer?.cancelsTouchesInView = false
         self.rightViewController.view.addGestureRecognizer(tapRecognizer!)
+ 
+ 
 
     }
     override func didReceiveMemoryWarning() {
