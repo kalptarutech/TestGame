@@ -39,6 +39,8 @@
 		8429A8161D7C9E0900EFF6DD /* MMRevealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429A8151D7C9E0900EFF6DD /* MMRevealViewController.swift */; };
 		8429A8181D7DDD8800EFF6DD /* MMMenuControllerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8429A8171D7DDD8800EFF6DD /* MMMenuControllerTableViewCell.swift */; };
 		8460583F1E05989200927F88 /* MMAgentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8460583E1E05989200927F88 /* MMAgentsViewController.swift */; };
+		84A935911E1A82AE00FA93F5 /* MMAgentViewInCarousel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A935901E1A82AE00FA93F5 /* MMAgentViewInCarousel.swift */; };
+		84A935931E1A83C100FA93F5 /* MMAgentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A935921E1A83C100FA93F5 /* MMAgentModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +102,8 @@
 		8429A8151D7C9E0900EFF6DD /* MMRevealViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMRevealViewController.swift; sourceTree = "<group>"; };
 		8429A8171D7DDD8800EFF6DD /* MMMenuControllerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMMenuControllerTableViewCell.swift; sourceTree = "<group>"; };
 		8460583E1E05989200927F88 /* MMAgentsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAgentsViewController.swift; sourceTree = "<group>"; };
+		84A935901E1A82AE00FA93F5 /* MMAgentViewInCarousel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAgentViewInCarousel.swift; sourceTree = "<group>"; };
+		84A935921E1A83C100FA93F5 /* MMAgentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MMAgentModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +152,8 @@
 				8429A8131D7C9C5F00EFF6DD /* MMMenuViewController.swift */,
 				8429A8171D7DDD8800EFF6DD /* MMMenuControllerTableViewCell.swift */,
 				8460583E1E05989200927F88 /* MMAgentsViewController.swift */,
+				84A935901E1A82AE00FA93F5 /* MMAgentViewInCarousel.swift */,
+				84A935921E1A83C100FA93F5 /* MMAgentModel.swift */,
 			);
 			path = MMPorjSwift;
 			sourceTree = "<group>";
@@ -311,6 +317,8 @@
 				8408D3511D7BEFA700140202 /* SDWebImageManager.m in Sources */,
 				8408D34C1D7BEFA700140202 /* SDImageCache.m in Sources */,
 				8408D3501D7BEFA700140202 /* SDWebImageDownloaderOperation.m in Sources */,
+				84A935931E1A83C100FA93F5 /* MMAgentModel.swift in Sources */,
+				84A935911E1A82AE00FA93F5 /* MMAgentViewInCarousel.swift in Sources */,
 				8408D3151D7BEF9000140202 /* iCarousel.m in Sources */,
 				8460583F1E05989200927F88 /* MMAgentsViewController.swift in Sources */,
 				8408D3531D7BEFA700140202 /* UIButton+WebCache.m in Sources */,

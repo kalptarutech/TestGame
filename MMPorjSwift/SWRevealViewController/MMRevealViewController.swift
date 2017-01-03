@@ -56,19 +56,30 @@ class MMRevealViewController: SWRevealViewController, SWRevealViewControllerDele
         revealController.rightViewRevealOverdraw = 0
         revealController.rightViewRevealWidth = revealController.width
         revealController.setFrontViewPosition(.LeftSideMost, animated: true)
-       revealController.panGestureRecognizer().enabled = true
+        
+ 
+     // if(rightVC.isKindOfClass(NSClassFromString("MMAgentsViewController"))) {
+
+        
+    //  } else {
+        revealController.panGestureRecognizer().enabled = true
         
         
         self.rightViewController!.view!.addGestureRecognizer(self.panGestureRecognizer()!);
-        
-        self.frontViewPosition = .LeftSideMost
         
         tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         tapRecognizer?.numberOfTouchesRequired = 1
         tapRecognizer?.cancelsTouchesInView = false
         self.rightViewController.view.addGestureRecognizer(tapRecognizer!)
- 
- 
+        
+        
+
+    
+       
+        
+        self.frontViewPosition = .LeftSideMost
+        
+       
 
     }
     override func didReceiveMemoryWarning() {

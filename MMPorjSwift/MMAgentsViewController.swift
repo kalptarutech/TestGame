@@ -43,6 +43,10 @@ class MMAgentsViewController: UIViewController,iCarouselDelegate,iCarouselDataSo
         return items.count
     }
     
+    func carouselItemWidth(carousel: iCarousel) -> CGFloat {
+       return 320 - 20;
+    }
+    
     func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView
     {
         var label: UILabel
@@ -54,36 +58,50 @@ class MMAgentsViewController: UIViewController,iCarouselDelegate,iCarouselDataSo
             //don't do anything specific to the index within
             //this `if (view == nil) {...}` statement because the view will be
             //recycled and used with other index values later
-            itemView = UIImageView(frame:carousel.frame)
+            itemView = UIImageView.init()
             itemView.image = UIImage(named: "agent_card_background")
          //   itemView.backgroundColor = UIColor.blueColor();
             itemView.contentMode = .ScaleAspectFit
            // itemView.
             
-          /*  label = UILabel(frame:itemView.bounds)
+            label = UILabel(frame:itemView.bounds)
             label.backgroundColor = UIColor.clearColor()
             label.textAlignment = .Center
             label.font = label.font.fontWithSize(50)
             label.tag = 1
             itemView.addSubview(label)
- */
+ 
         }
         else
         {
             //get a reference to the label in the recycled view
             itemView = view as! UIImageView;
-         //   label = itemView.viewWithTag(1) as! UILabel!
+            itemView.contentMode = .ScaleAspectFit
+
+            label = itemView.viewWithTag(1) as! UILabel!
         }
         
+        print(carousel.frame);
+        var frame :CGRect = carousel.frame;
+        
+        frame.origin.x = 0;
+        frame.origin.y = 0;
+        frame.size.width = 326;
+        frame.size.height = 328;
+        
+        itemView.frame = frame;
+        carousel.backgroundColor = UIColor.brownColor()
         //set item label
         //remember to always set any properties of your carousel item
         //views outside of the `if (view == nil) {...}` check otherwise
         //you'll get weird issues with carousel item content appearing
         //in the wrong place in the carousel
-      //  label.text = "\(items[index])"
+        label.text = "\(items[index])"
         
         return itemView
     }
+    
+    
     
     func carousel(carousel: iCarousel, valueForOption option: iCarouselOption, withDefault value: CGFloat) -> CGFloat
     {

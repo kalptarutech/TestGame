@@ -761,10 +761,63 @@
             </objects>
             <point key="canvasLocation" x="741" y="1013.25"/>
         </scene>
+        <!--Agent View In Carousel-->
+        <scene sceneID="Urm-54-NYX">
+            <objects>
+                <viewController storyboardIdentifier="MMAgentViewInCarousel" id="jov-Xh-myg" customClass="MMAgentViewInCarousel" customModule="MMPorjSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="skS-c1-yS8"/>
+                        <viewControllerLayoutGuide type="bottom" id="HuA-h6-sWx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QOt-0T-utS">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="agent_card_background" translatesAutoresizingMaskIntoConstraints="NO" id="Jp2-cn-aXg">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HuA-h6-sWx" firstAttribute="top" secondItem="Jp2-cn-aXg" secondAttribute="bottom" id="3zm-ud-Oj5"/>
+                            <constraint firstItem="Jp2-cn-aXg" firstAttribute="top" secondItem="skS-c1-yS8" secondAttribute="bottom" constant="-20" id="6zt-md-SSO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Jp2-cn-aXg" secondAttribute="trailing" constant="-20" id="9sf-q4-kWe"/>
+                            <constraint firstItem="Jp2-cn-aXg" firstAttribute="leading" secondItem="QOt-0T-utS" secondAttribute="leadingMargin" constant="-20" id="tyl-x1-ovH"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="Jp2-cn-aXg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="6zt-md-SSO"/>
+                                <exclude reference="9sf-q4-kWe"/>
+                                <exclude reference="tyl-x1-ovH"/>
+                                <exclude reference="3zm-ud-Oj5"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="Jp2-cn-aXg"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="6zt-md-SSO"/>
+                                <include reference="9sf-q4-kWe"/>
+                                <include reference="tyl-x1-ovH"/>
+                                <include reference="3zm-ud-Oj5"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="326" height="328"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TUs-Qw-Ttl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="862.5" y="1662"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Image_background" width="1143" height="2032"/>
         <image name="achievement_button" width="38" height="27"/>
+        <image name="agent_card_background" width="270" height="396"/>
         <image name="menu" width="33" height="7"/>
         <image name="menu_backlground" width="1143" height="2032"/>
         <image name="settings" width="33" height="35"/>
