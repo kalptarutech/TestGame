@@ -26,27 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MMPorjSwift/MMAgentsViewController.swift"
-            timestampString = "505051860.716853"
+            timestampString = "505485714.99612"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53"
-            landmarkName = "carousel(_:viewForItemAtIndex:reusingView:)"
-            landmarkType = "5">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "MMPorjSwift/MMAgentsViewController.swift"
-            timestampString = "505051860.716853"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "72"
+            endingLineNumber = "72"
             landmarkName = "carousel(_:viewForItemAtIndex:reusingView:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -74,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MMPorjSwift/MMAgentsViewController.swift"
-            timestampString = "505051877.069693"
+            timestampString = "505462030.765697"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "47"
-            endingLineNumber = "47"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
             landmarkName = "carouselItemWidth(_:)"
             landmarkType = "5">
          </BreakpointContent>

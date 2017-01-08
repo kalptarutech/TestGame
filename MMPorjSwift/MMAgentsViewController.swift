@@ -19,10 +19,10 @@ class MMAgentsViewController: UIViewController,iCarouselDelegate,iCarouselDataSo
     {
         super.awakeFromNib()
       
-        for i in 0...99
-        {
-            items.append(i)
-        }
+//        for i in 0...99
+//        {
+//            items.append(i)
+//        }
  
     }
  
@@ -33,9 +33,24 @@ class MMAgentsViewController: UIViewController,iCarouselDelegate,iCarouselDataSo
         //carouselTest.delegate = self;
        // carouselTest.dataSource = self;
        // self.view.bringSubviewToFront(carouselTest);
+        self.view!.setNeedsLayout()
+        self.view!.layoutIfNeeded()
+        self.carouselTest!.setNeedsLayout()
+        self.carouselTest!.layoutIfNeeded()
+
         carouselTest.type = .CoverFlow2
         
         
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated);
+        for i in 0...99
+        {
+            items.append(i)
+        }
+        
+        self.carouselTest.reloadData();
     }
     
     func numberOfItemsInCarousel(carousel: iCarousel) -> Int
@@ -49,56 +64,36 @@ class MMAgentsViewController: UIViewController,iCarouselDelegate,iCarouselDataSo
     
     func carousel(carousel: iCarousel, viewForItemAtIndex index: Int, reusingView view: UIView?) -> UIView
     {
-        var label: UILabel
-        var itemView: UIImageView
-        
+        var agentViewInCarouel: MMAgentViewInCarousel!;
+
         //create new view if no view is available for recycling
         if (view == nil)
         {
             //don't do anything specific to the index within
             //this `if (view == nil) {...}` statement because the view will be
             //recycled and used with other index values later
-            itemView = UIImageView.init()
-            itemView.image = UIImage(named: "agent_card_background")
-         //   itemView.backgroundColor = UIColor.blueColor();
-            itemView.contentMode = .ScaleAspectFit
-           // itemView.
             
-            label = UILabel(frame:itemView.bounds)
-            label.backgroundColor = UIColor.clearColor()
-            label.textAlignment = .Center
-            label.font = label.font.fontWithSize(50)
-            label.tag = 1
-            itemView.addSubview(label)
- 
+            agentViewInCarouel = self.storyboard?.instantiateViewControllerWithIdentifier("MMAgentViewInCarousel") as! MMAgentViewInCarousel;
+            agentViewInCarouel.view.frame = CGRectMake(0, 0, carousel.frame.size.width, carousel.frame.size.height);
+        
         }
         else
         {
-            //get a reference to the label in the recycled view
-            itemView = view as! UIImageView;
-            itemView.contentMode = .ScaleAspectFit
-
-            label = itemView.viewWithTag(1) as! UILabel!
+            
+            return view!;
         }
         
-        print(carousel.frame);
-        var frame :CGRect = carousel.frame;
-        
-        frame.origin.x = 0;
-        frame.origin.y = 0;
-        frame.size.width = 326;
-        frame.size.height = 328;
-        
-        itemView.frame = frame;
+       
+//        itemView.frame = frame;
         carousel.backgroundColor = UIColor.brownColor()
         //set item label
         //remember to always set any properties of your carousel item
         //views outside of the `if (view == nil) {...}` check otherwise
         //you'll get weird issues with carousel item content appearing
         //in the wrong place in the carousel
-        label.text = "\(items[index])"
+       // label.text = "\(items[index])"
         
-        return itemView
+        return agentViewInCarouel.view;
     }
     
     

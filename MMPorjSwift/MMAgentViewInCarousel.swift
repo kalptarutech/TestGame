@@ -10,6 +10,8 @@ import Foundation
 
 class MMAgentViewInCarousel: UIViewController {
 
+    
+    
     func loadView(frame :CGRect, dataSource:MMAgentModel) {
     
     }
